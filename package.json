@@ -1,20 +1,27 @@
 {
-	"name": "your-module-name",
-	"version": "0.1.0",
-	"main": "main.js",
-	"scripts": {
-		"format": "prettier -w ."
-	},
-	"license": "MIT",
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/bitfocus/companion-module-your-module-name.git"
-	},
-	"dependencies": {
-		"@companion-module/base": "~1.0.1"
-	},
-	"devDependencies": {
-		"@companion-module/tools": "^0.5.1"
-	},
-	"prettier": "@companion-module/tools/.prettierrc.json"
+  "name": "betr-support",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "format": "prettier -w ."
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bitfocus/companion-module-betr-support.git"
+  },
+  "dependencies": {
+    "@companion-module/base": "~1.0.1",
+    "axios": "^1.3.5"
+  },
+  "devDependencies": {
+    "@companion-module/tools": "^0.5.1"
+  },
+  "prettier": "@companion-module/tools/.prettierrc.json",
+  "description": "See [HELP.md](./HELP.md) and [LICENSE](./LICENSE)",
+  "bugs": {
+    "url": "https://github.com/bitfocus/companion-module-betr-support/issues"
+  },
+  "homepage": "https://github.com/bitfocus/companion-module-betr-support#readme",
+  "author": ""
 }
