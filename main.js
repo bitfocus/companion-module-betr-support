@@ -32,17 +32,17 @@ class ModuleInstance extends InstanceBase {
 		return [
 			{
 				type: 'textinput',
-				id: 'host',
-				label: 'Target IP',
+				id: 'api_key',
+				label: 'API key',
 				width: 8,
-				regex: Regex.IP,
+				// regex: Regex.IP,
 			},
 			{
 				type: 'textinput',
-				id: 'port',
-				label: 'Target Port',
+				id: 'project_id',
+				label: 'Project id',
 				width: 4,
-				regex: Regex.PORT,
+				// regex: Regex.PORT,
 			},
 		]
 	}
