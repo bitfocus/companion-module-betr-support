@@ -1,6 +1,5 @@
 const axios = require('axios');
-const webhookUrl = 'https://daily-quotes.abacies.com/v1/bitfocus/webhook';
-const data = { message: 'Hello, Better Support Webhook' };
+const webhookUrl = 'http://54.175.123.11:3001/data';
 
 async function triggerWebhook(webhookUrl, data) {
 	try {
@@ -27,8 +26,10 @@ module.exports = function (self) {
 				},
 			],
 			callback: async (event) => {
-				console.log('Hello world!', event.options.webhook1)
-				triggerWebhook(webhookUrl, data);
+				console.log('data -----', self.config)
+				const data = self.config
+				console.log('Betr Support Webhook', event.options.webhook1)
+				var res = triggerWebhook(webhookUrl, data);
 
 			},
 		},

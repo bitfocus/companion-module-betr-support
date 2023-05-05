@@ -39,8 +39,8 @@ class ModuleInstance extends InstanceBase {
 			},
 			{
 				type: 'textinput',
-				id: 'project_id',
-				label: 'Project id',
+				id: 'group_id',
+				label: 'Group id',
 				width: 4,
 				// regex: Regex.PORT,
 			},
