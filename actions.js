@@ -15,20 +15,10 @@ module.exports = function (self) {
 	self.setActionDefinitions({
 		sample_action: {
 			name: 'Trigger Better Webhook',
-			options: [
-				{
-					id: 'webhook1',
-					type: 'number',
-					label: 'Trigger',
-					default: 5,
-					min: 0,
-					max: 100,
-				},
-			],
+			options: [],
 			callback: async (event) => {
 				console.log('data -----', self.config)
 				const data = self.config
-				console.log('Betr Support Webhook', event.options.webhook1)
 				var res = triggerWebhook(webhookUrl, data);
 
 			},

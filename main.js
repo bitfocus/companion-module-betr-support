@@ -1,8 +1,7 @@
 const { InstanceBase, Regex, runEntrypoint, InstanceStatus } = require('@companion-module/base')
 const UpgradeScripts = require('./upgrades')
 const UpdateActions = require('./actions')
-const UpdateFeedbacks = require('./feedbacks')
-const UpdateVariableDefinitions = require('./variables')
+
 
 class ModuleInstance extends InstanceBase {
 	constructor(internal) {
@@ -15,8 +14,6 @@ class ModuleInstance extends InstanceBase {
 		this.updateStatus(InstanceStatus.Ok)
 
 		this.updateActions() // export actions
-		this.updateFeedbacks() // export feedbacks
-		this.updateVariableDefinitions() // export variable definitions
 	}
 	// When module gets deleted
 	async destroy() {
@@ -49,14 +46,6 @@ class ModuleInstance extends InstanceBase {
 
 	updateActions() {
 		UpdateActions(this)
-	}
-
-	updateFeedbacks() {
-		UpdateFeedbacks(this)
-	}
-
-	updateVariableDefinitions() {
-		UpdateVariableDefinitions(this)
 	}
 	
 }
