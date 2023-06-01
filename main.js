@@ -1,6 +1,7 @@
 const { InstanceBase, Regex, runEntrypoint, InstanceStatus } = require('@companion-module/base')
 const UpgradeScripts = require('./upgrades')
 const UpdateActions = require('./actions')
+const UpdatePresetDefinitions = require('./presets')
 
 
 class ModuleInstance extends InstanceBase {
@@ -14,6 +15,8 @@ class ModuleInstance extends InstanceBase {
 		this.updateStatus(InstanceStatus.Ok)
 
 		this.updateActions() // export actions
+		
+		this.updatePresets() // export presets
 	}
 	// When module gets deleted
 	async destroy() {
@@ -46,6 +49,10 @@ class ModuleInstance extends InstanceBase {
 
 	updateActions() {
 		UpdateActions(this)
+	}
+	
+	updatePresets() {
+		UpdatePresetDefinitions(this)
 	}
 	
 }
