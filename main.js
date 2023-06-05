@@ -1,7 +1,7 @@
 const { InstanceBase, Regex, runEntrypoint, InstanceStatus } = require('@companion-module/base')
 const UpgradeScripts = require('./upgrades')
 const UpdateActions = require('./actions')
-const UpdatePresetDefinitions = require('./presets')
+const UpdatePresetDefinitions = require('./preset')
 
 
 class ModuleInstance extends InstanceBase {

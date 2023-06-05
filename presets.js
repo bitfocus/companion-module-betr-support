@@ -19,7 +19,7 @@ module.exports = function (self) {
 				{
 					down: [
 						{
-							actionId: 'showHide',
+							actionId: 'sample_action',
 							options: { graphicId: 'help1', status: 'toggle' },
 						},
 					],
