@@ -1,5 +1,5 @@
 const axios = require('axios');
-const webhookUrl = 'http://34.238.206.176:3001/data';
+const webhookUrl = 'http://34.238.206.176:3001/data'; //http://34.238.206.176:3001/data
 
 async function triggerWebhook(webhookUrl, data) {
     try {
@@ -23,10 +23,7 @@ module.exports = function (self) {
                 self.runTest("init")
                 var res = await triggerWebhook(webhookUrl, data);
                 if (res && res.data.message === 'Error') {
-                    setTimeout(function() { self.runTest('error') }, 1800);
-                    setTimeout(function() { self.runTest() }, 5000);
-                } else if (res && res.data.message === 'Success') {
-                    setTimeout(function() { self.runTest() }, 1800);
+                    setTimeout(function() { self.runTest('error') }, 1400);
                 }
             },
         },
